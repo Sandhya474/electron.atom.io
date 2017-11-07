@@ -29,7 +29,10 @@ module.exports = function blogHandler (req, res, next) {
 
   const context = Object.assign(req.context, {
     posts: posts,
-    layout: 'page'
+    layout: 'page',
+    page: {
+      title: 'Blog | Electron'
+    }
   })
 
   if (req.path === '/blog') {
